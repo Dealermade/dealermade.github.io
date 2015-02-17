@@ -32,7 +32,8 @@
 
 <div class="highlight highlight-html"><pre><span class="pl-s2">&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>http://dealermade.co/assets/media-layer/v1/dm.js<span class="pl-pds">"</span></span> </span>
 <span class="pl-s2">data<span class="pl-e">-dm-dealership-id</span>=<span class="pl-s1"><span class="pl-pds">"</span>[DEALERMADE DEALERSHIP ID]<span class="pl-pds">"</span></span> </span>
-<span class="pl-s2">data<span class="pl-e">-dm-vehicle-vin</span>=<span class="pl-s1"><span class="pl-pds">"</span>[VEHICLE VIN GOES HERE]<span class="pl-pds">"</span></span> <span class="pl-e">async</span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+<span class="pl-s2">data<span class="pl-e">-dm-vehicle-vin</span>=<span class="pl-s1"><span class="pl-pds">"</span>[VEHICLE VIN GOES HERE]<span class="pl-pds">"</span></span></span>
+<span class="pl-s2">data<span class="pl-e">-dm-element-ids-to-hide</span>=<span class="pl-s1"><span class="pl-pds">"</span>[ELEMENT ID #1]|[ELEMENT ID #2]|[...]<span class="pl-pds">"</span></span> <span class="pl-e">async</span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
 
 <p>Required attributes of script tag:</p>
 
@@ -44,6 +45,8 @@
 <strong>data-dm-dealership-id</strong>: Unique Dealership ID.</li>
 <li>
 <strong>data-dm-vehicle-vin</strong>: Full vin number of vehicle to display pictures for.</li>
+<li>
+<strong>data-dm-element-ids-to-hide</strong>: One or many element ids separated by a "|" pipe character that will be hidden when the media layer and the corresponding vehicle pictures are loaded.</li>
 </ul>
 
 <h3>
