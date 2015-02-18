@@ -42,12 +42,24 @@
 <strong>src</strong>: currently <em>must</em> point to: <a href="http://dealermade.co/assets/media-layer/v1/dm.js">http://dealermade.co/assets/media-layer/v1/dm.js</a><br>
 </li>
 <li>
-<strong>data-dm-dealership-id</strong>: Unique Dealership ID.</li>
+<strong>data-dm-dealership-id</strong>: Unique Dealership ID (without brackets).</li>
 <li>
-<strong>data-dm-vehicle-vin</strong>: Full vin number of vehicle to display pictures for.</li>
+<strong>data-dm-vehicle-vin</strong>: Full vin number of vehicle to display pictures for (also without brackets).</li>
 <li>
-<strong>data-dm-element-ids-to-hide</strong>: One or many element ids separated by a "|" pipe character that will be hidden when the media layer and the corresponding vehicle pictures are loaded.</li>
+<strong>data-dm-element-ids-to-hide</strong>: One or many element ids separated by a "|" pipe character that will be hidden when the media layer and the corresponding vehicle pictures are loaded (also without brackets).</li>
 </ul>
+
+<h3>
+<a id="the-media-layer-will-remain-invisible-until-pictures-have-been-taken-for-the-vehicle-using-the-dealermade-photo-studio-also-the-element-ids-listed-in-data-dm-element-ids-to-hide-will-not-be-hidden-unless-the-media-layer-has-loaded-with-pictures" class="anchor" href="#the-media-layer-will-remain-invisible-until-pictures-have-been-taken-for-the-vehicle-using-the-dealermade-photo-studio-also-the-element-ids-listed-in-data-dm-element-ids-to-hide-will-not-be-hidden-unless-the-media-layer-has-loaded-with-pictures" aria-hidden="true"><span class="octicon octicon-link"></span></a>The media layer will remain invisible until pictures have been taken for the vehicle using the dealermade photo studio, also the element ids listed in data-dm-element-ids-to-hide will not be hidden unless the media layer has loaded with pictures.</h3>
+
+<p>Example Implementation:</p>
+
+<div class="highlight highlight-html"><pre><span class="pl-s2">&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>http://dealermade.co/assets/media-layer/v1/dm.js<span class="pl-pds">"</span></span> </span>
+<span class="pl-s2">data<span class="pl-e">-dm-dealership-id</span>=<span class="pl-s1"><span class="pl-pds">"</span>team-of-navasota<span class="pl-pds">"</span></span> </span>
+<span class="pl-s2">data<span class="pl-e">-dm-vehicle-vin</span>=<span class="pl-s1"><span class="pl-pds">"</span>1FTEW1EF4FFA24461<span class="pl-pds">"</span></span></span>
+<span class="pl-s2">data<span class="pl-e">-dm-element-ids-to-hide</span>=<span class="pl-s1"><span class="pl-pds">"</span>dtlExpand|vpActualContent<span class="pl-pds">"</span></span> <span class="pl-e">async</span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+
+<p><a href="http://www.teamofnavasota.com/new/details/1FTEW1EF4FFA24461">http://www.teamofnavasota.com/new/details/1FTEW1EF4FFA24461</a></p>
 
 <h3>
 <a id="support---having-trouble-with-our-media-layer" class="anchor" href="#support---having-trouble-with-our-media-layer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support - Having trouble with our media layer?</h3>
