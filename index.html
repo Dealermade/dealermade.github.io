@@ -32,7 +32,7 @@
 
 <div class="highlight highlight-html"><pre><span class="pl-s2">&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>http://dealermade.co/assets/media-layer/v1/dm.js<span class="pl-pds">"</span></span> </span>
 <span class="pl-s2">data<span class="pl-e">-dm-dealership-id</span>=<span class="pl-s1"><span class="pl-pds">"</span>[DEALERMADE DEALERSHIP ID]<span class="pl-pds">"</span></span> </span>
-<span class="pl-s2">data<span class="pl-e">-dm-vehicle-vin</span>=<span class="pl-s1"><span class="pl-pds">"</span>[VEHICLE VIN GOES HERE]<span class="pl-pds">"</span></span></span>
+<span class="pl-s2">data<span class="pl-e">-dm-vehicle-vin</span>=<span class="pl-s1"><span class="pl-pds">"</span>[VEHICLE VIN]<span class="pl-pds">"</span></span></span>
 <span class="pl-s2">data<span class="pl-e">-dm-element-ids-to-hide</span>=<span class="pl-s1"><span class="pl-pds">"</span>[ELEMENT ID #1]|[ELEMENT ID #2]|[...]<span class="pl-pds">"</span></span> <span class="pl-e">async</span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
 
 <p>Required attributes of script tag:</p>
@@ -52,7 +52,8 @@
 <h3>
 <a id="the-media-layer-will-remain-invisible-until-pictures-have-been-taken-for-the-vehicle-using-the-dealermade-photo-studio-also-the-element-ids-listed-in-data-dm-element-ids-to-hide-will-not-be-hidden-unless-the-media-layer-has-loaded-with-pictures" class="anchor" href="#the-media-layer-will-remain-invisible-until-pictures-have-been-taken-for-the-vehicle-using-the-dealermade-photo-studio-also-the-element-ids-listed-in-data-dm-element-ids-to-hide-will-not-be-hidden-unless-the-media-layer-has-loaded-with-pictures" aria-hidden="true"><span class="octicon octicon-link"></span></a>The media layer will remain invisible until pictures have been taken for the vehicle using the dealermade photo studio, also the element ids listed in data-dm-element-ids-to-hide will not be hidden unless the media layer has loaded with pictures.</h3>
 
-<p>Example Implementation:</p>
+<h3>
+<a id="example-media-layer-implementation" class="anchor" href="#example-media-layer-implementation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example Media Layer Implementation:</h3>
 
 <div class="highlight highlight-html"><pre><span class="pl-s2">&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>http://dealermade.co/assets/media-layer/v1/dm.js<span class="pl-pds">"</span></span> </span>
 <span class="pl-s2">data<span class="pl-e">-dm-dealership-id</span>=<span class="pl-s1"><span class="pl-pds">"</span>team-of-navasota<span class="pl-pds">"</span></span> </span>
@@ -60,6 +61,37 @@
 <span class="pl-s2">data<span class="pl-e">-dm-element-ids-to-hide</span>=<span class="pl-s1"><span class="pl-pds">"</span>dtlExpand|vpActualContent<span class="pl-pds">"</span></span> <span class="pl-e">async</span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
 
 <p><a href="http://www.teamofnavasota.com/new/details/1FTEW1EF4FFA24461">http://www.teamofnavasota.com/new/details/1FTEW1EF4FFA24461</a></p>
+
+<h3>
+<a id="thumbnail-image-api" class="anchor" href="#thumbnail-image-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>Thumbnail Image API</h3>
+
+<div class="highlight highlight-html"><pre>http://dealermade.co/api/1/dealerships/[DEALERMADE DEALERSHIP ID]/vehicles/[VEHICLE VIN]/images/[PICTURE SIZE].jpg?default_image_url=[default_image_url]</pre></div>
+
+<p>Required parameters in the image url:</p>
+
+<ul>
+<li>
+<strong>[DEALERMADE DEALERSHIP ID]</strong>: Unique Dealership ID (without brackets).</li>
+<li>
+<strong>[VEHICLE VIN]</strong>: Full vin number of vehicle to display pictures for (also without brackets).</li>
+<li>
+<strong>[PICTURE SIZE]</strong>: One of the following standard Dealermade picture sizes(also without brackets).</li>
+<li>
+<strong>[default_image_url]</strong>: Url Encoded default image thumbnail for that vehicle.  This will be used if pictures have not yet been taken using the Dealermade Photo Studio(also without brackets).
+** full 5472wx3648h or 3080wx5472h
+** large 1500wx1000h
+** medium 800wx533h
+** main 640wx427h
+** preview 200wx133h
+** thumb 160wx107h
+** mini 60wx40h
+** micro 25wx17h</li>
+</ul>
+
+<h3>
+<a id="example-thumbnail-image-api-implementation" class="anchor" href="#example-thumbnail-image-api-implementation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example Thumbnail Image API Implementation:</h3>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>http://dealermade.co/api/1/dealerships/team-of-navasota/vehicles/1FTFW1ET3DKD06282/images/thumb.jpg?default_image_url=http%3A%2F%2Ftagoreimg.d2fs.net%2Fimg%2Fused%2Fford%2Ff-150%2F1ftfw1et3dkd06282%2F3777d222-6258-4cf3-b694-6d6acd014c01.jpeg%3Fw%3D160%26h%3D120<span class="pl-pds">"</span></span>/&gt;</pre></div>
 
 <h3>
 <a id="support---having-trouble-with-our-media-layer" class="anchor" href="#support---having-trouble-with-our-media-layer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support - Having trouble with our media layer?</h3>
