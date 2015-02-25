@@ -33,6 +33,7 @@
 <div class="highlight highlight-html"><pre><span class="pl-s2">&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>http://dealermade.co/assets/media-layer/v1/dm.js<span class="pl-pds">"</span></span> </span>
 <span class="pl-s2">data<span class="pl-e">-dm-dealership-id</span>=<span class="pl-s1"><span class="pl-pds">"</span>[DEALERMADE DEALERSHIP ID]<span class="pl-pds">"</span></span> </span>
 <span class="pl-s2">data<span class="pl-e">-dm-vehicle-vin</span>=<span class="pl-s1"><span class="pl-pds">"</span>[VEHICLE VIN]<span class="pl-pds">"</span></span></span>
+<span class="pl-s2">data<span class="pl-e">-dm-element-id-to-replace</span>=<span class="pl-s1"><span class="pl-pds">"</span>[ELEMENT ID]<span class="pl-pds">"</span></span></span>
 <span class="pl-s2">data<span class="pl-e">-dm-element-ids-to-hide</span>=<span class="pl-s1"><span class="pl-pds">"</span>[ELEMENT ID #1]|[ELEMENT ID #2]|[...]<span class="pl-pds">"</span></span> <span class="pl-e">async</span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
 
 <p>Required attributes of script tag:</p>
@@ -46,6 +47,8 @@
 <li>
 <strong>data-dm-vehicle-vin</strong>: Full vin number of vehicle to display pictures for (also without brackets).</li>
 <li>
+<strong>data-dm-element-id-to-replace</strong>: One element id to replace with the media layer.</li>
+<li>
 <strong>data-dm-element-ids-to-hide</strong>: One or many element ids separated by a "|" pipe character that will be hidden when the media layer and the corresponding vehicle pictures are loaded (also without brackets).</li>
 </ul>
 
@@ -58,7 +61,8 @@
 <div class="highlight highlight-html"><pre><span class="pl-s2">&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s1"><span class="pl-pds">"</span>http://dealermade.co/assets/media-layer/v1/dm.js<span class="pl-pds">"</span></span> </span>
 <span class="pl-s2">data<span class="pl-e">-dm-dealership-id</span>=<span class="pl-s1"><span class="pl-pds">"</span>team-of-navasota<span class="pl-pds">"</span></span> </span>
 <span class="pl-s2">data<span class="pl-e">-dm-vehicle-vin</span>=<span class="pl-s1"><span class="pl-pds">"</span>1FTEW1EF4FFA24461<span class="pl-pds">"</span></span></span>
-<span class="pl-s2">data<span class="pl-e">-dm-element-ids-to-hide</span>=<span class="pl-s1"><span class="pl-pds">"</span>dtlExpand|vpActualContent<span class="pl-pds">"</span></span> <span class="pl-e">async</span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+<span class="pl-s2">data<span class="pl-e">-dm-element-id-to-replace</span>=<span class="pl-s1"><span class="pl-pds">"</span>vpActualContent<span class="pl-pds">"</span></span></span>
+<span class="pl-s2">data<span class="pl-e">-dm-element-ids-to-hide</span>=<span class="pl-s1"><span class="pl-pds">"</span>dtlExpand<span class="pl-pds">"</span></span> <span class="pl-e">async</span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
 
 <p><a href="http://www.teamofnavasota.com/new/details/1FTEW1EF4FFA24461">http://www.teamofnavasota.com/new/details/1FTEW1EF4FFA24461</a></p>
 
@@ -78,14 +82,18 @@
 <strong>[PICTURE SIZE]</strong>: One of the following standard Dealermade picture sizes(also without brackets).</li>
 <li>
 <strong>[default_image_url]</strong>: Url Encoded default image thumbnail for that vehicle.  This will be used if pictures have not yet been taken using the Dealermade Photo Studio(also without brackets).
-** full 5472wx3648h or 3080wx5472h
-** large 1500wx1000h
-** medium 800wx533h
-** main 640wx427h
-** preview 200wx133h
-** thumb 160wx107h
-** mini 60wx40h
-** micro 25wx17h</li>
+
+<ul>
+<li>full 5472wx3648h or 3080wx5472h</li>
+<li>large 1500wx1000h</li>
+<li>medium 800wx533h</li>
+<li>main 640wx427h</li>
+<li>preview 200wx133h</li>
+<li>thumb 160wx107h</li>
+<li>mini 60wx40h</li>
+<li>micro 25wx17h</li>
+</ul>
+</li>
 </ul>
 
 <h3>
