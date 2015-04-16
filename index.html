@@ -16,8 +16,8 @@
     </section>
 
     <section class="main-content">
-      <h2>
-<a id="media-layer-api" class="anchor" href="#media-layer-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>Media Layer API</h2>
+      <h1>
+<a id="media-layer-api" class="anchor" href="#media-layer-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>Media Layer API</h1>
 
 <div class="highlight highlight-html"><pre><span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>http://dealermade.co/assets/media-layer/v1/dm.js<span class="pl-pds">"</span></span> </span>
 <span class="pl-s1">data<span class="pl-e">-dm-dealership-id</span>=<span class="pl-s"><span class="pl-pds">"</span>[DEALERMADE DEALERSHIP ID]<span class="pl-pds">"</span></span> </span>
@@ -58,20 +58,20 @@
 
 <p><a href="http://www.teamofnavasota.com/new/details/1FTEW1EF4FFA24461">http://www.teamofnavasota.com/new/details/1FTEW1EF4FFA24461</a></p>
 
+<h1>
+<a id="thumbnail-api" class="anchor" href="#thumbnail-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>Thumbnail API</h1>
+
+<p>We currently have two alternatives for a thumbnail API:</p>
+
+<ol>
+<li>Thumbnail Image URL API</li>
+<li>Thumbnail JavaScript API</li>
+</ol>
+
+<p>Please choose the API that is most convenient for you.</p>
+
 <h2>
-<a id="thumbnail-javascript-api" class="anchor" href="#thumbnail-javascript-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>Thumbnail JavaScript API</h2>
-
-<p>To add our thumbnail javascript API, just add our javascript tag to any page that have thumbnails:</p>
-
-<div class="highlight highlight-html"><pre><span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>http://dealermade.co/assets/thumbnails/v1/api.js<span class="pl-pds">"</span></span>&gt;</span>
-<span class="pl-s1">&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
-
-<p>And add the data-vin html attribute populated with the vehicle vin to any image tags for vehicles.</p>
-
-<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>[Your image url here]<span class="pl-pds">"</span></span> <span class="pl-e">data-vin</span>=<span class="pl-s"><span class="pl-pds">"</span>[VEHICLE VIN HERE]<span class="pl-pds">"</span></span>&gt;</pre></div>
-
-<h2>
-<a id="thumbnail-image-api" class="anchor" href="#thumbnail-image-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>Thumbnail Image API</h2>
+<a id="1-thumbnail-image-url-api" class="anchor" href="#1-thumbnail-image-url-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Thumbnail Image URL API</h2>
 
 <div class="highlight highlight-html"><pre>http://dealermade.co/api/1/dealerships/[DEALERMADE DEALERSHIP ID]/vehicles/[VEHICLE VIN]/images/[PICTURE SIZE].jpg?default_image_url=[default_image_url]</pre></div>
 
@@ -110,6 +110,18 @@
 <a id="example-thumbnail-image-api-implementation" class="anchor" href="#example-thumbnail-image-api-implementation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example Thumbnail Image API Implementation:</h3>
 
 <div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>http://dealermade.co/api/1/dealerships/team-of-navasota/vehicles/1FTFW1ET3DKD06282/images/thumb.jpg?default_image_url=http%3A%2F%2Ftagoreimg.d2fs.net%2Fimg%2Fused%2Fford%2Ff-150%2F1ftfw1et3dkd06282%2F3777d222-6258-4cf3-b694-6d6acd014c01.jpeg%3Fw%3D160%26h%3D120<span class="pl-pds">"</span></span>/&gt;</pre></div>
+
+<h2>
+<a id="2-thumbnail-javascript-api" class="anchor" href="#2-thumbnail-javascript-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Thumbnail JavaScript API</h2>
+
+<p>To add our thumbnail javascript API, just add our javascript tag to any page that have thumbnails:</p>
+
+<div class="highlight highlight-html"><pre><span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>http://dealermade.co/assets/thumbnails/v1/api.js<span class="pl-pds">"</span></span>&gt;</span>
+<span class="pl-s1">&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+
+<p>And add the data-vin html attribute populated with the vehicle vin to any image tags for vehicles.</p>
+
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>[Your image url here]<span class="pl-pds">"</span></span> <span class="pl-e">data-vin</span>=<span class="pl-s"><span class="pl-pds">"</span>[VEHICLE VIN HERE]<span class="pl-pds">"</span></span>&gt;</pre></div>
 
 <h3>
 <a id="support---having-trouble-with-our-media-layer" class="anchor" href="#support---having-trouble-with-our-media-layer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support - Having trouble with our media layer?</h3>
