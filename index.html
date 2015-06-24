@@ -20,11 +20,10 @@
 <a id="media-layer-api" class="anchor" href="#media-layer-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>Media Layer API</h1>
 
 <div class="highlight highlight-html"><pre><span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>http://dealermade.co/assets/media-layer/v1/dm.js<span class="pl-pds">"</span></span> </span>
-<span class="pl-s1">data<span class="pl-e">-dm-dealership-id</span>=<span class="pl-s"><span class="pl-pds">"</span>[DEALERMADE DEALERSHIP ID]<span class="pl-pds">"</span></span> </span>
-<span class="pl-s1">data<span class="pl-e">-dm-vehicle-vin</span>=<span class="pl-s"><span class="pl-pds">"</span>[VEHICLE VIN]<span class="pl-pds">"</span></span></span>
-<span class="pl-s1">data<span class="pl-e">-dm-element-id-to-replace</span>=<span class="pl-s"><span class="pl-pds">"</span>[ELEMENT ID]<span class="pl-pds">"</span></span></span>
-<span class="pl-s1">data<span class="pl-e">-dm-insert-before-element-id</span>=<span class="pl-s"><span class="pl-pds">"</span>[ELEMENT ID]<span class="pl-pds">"</span></span></span>
-<span class="pl-s1">data<span class="pl-e">-dm-element-ids-to-hide</span>=<span class="pl-s"><span class="pl-pds">"</span>[ELEMENT ID #1]|[ELEMENT ID #2]|[...]<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+<span class="pl-s1">data<span class="pl-e">-dm-dealership-id</span>=<span class="pl-s"><span class="pl-pds">"</span>DEALERMADE DEALERSHIP ID<span class="pl-pds">"</span></span> </span>
+<span class="pl-s1">data<span class="pl-e">-dm-vehicle-vin</span>=<span class="pl-s"><span class="pl-pds">"</span>VEHICLE VIN<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+
+<p>The above script will insert the media layer next to the script tag.</p>
 
 <p>Required attributes of script tag:</p>
 
@@ -33,15 +32,24 @@
 <strong>src</strong>: currently <em>must</em> point to: <a href="http://dealermade.co/assets/media-layer/v1/dm.js">http://dealermade.co/assets/media-layer/v1/dm.js</a><br>
 </li>
 <li>
-<strong>data-dm-dealership-id</strong>: Unique Dealership ID (without brackets).</li>
+<strong>data-dm-dealership-id</strong>: Unique Dealership ID.</li>
 <li>
-<strong>data-dm-vehicle-vin</strong>: Full vin number of vehicle to display pictures for (also without brackets).</li>
+<strong>data-dm-vehicle-vin</strong>: Full vin number of vehicle to display pictures for.</li>
+</ul>
+
+<p>Optional Attributes of script tag to configure media layer tag placement:</p>
+
+<ul>
 <li>
 <strong>data-dm-element-id-to-replace</strong>: One element id to replace with the media layer(not to be used with insert before, below) <strong>[optional]</strong>.</li>
 <li>
 <strong>data-dm-insert-before-element-id</strong>: One element id where the media layer will insert before (not to be used with id to replace, above)  <strong>[optional]</strong>.</li>
 <li>
-<strong>data-dm-element-ids-to-hide</strong>: One or many element ids separated by a "|" pipe character that will be hidden when the media layer and the corresponding vehicle pictures are loaded (also without brackets)  <strong>[optional]</strong>.</li>
+<strong>data-dm-element-ids-to-hide</strong>: One or many element ids separated by a "|" pipe character that will be hidden when the media layer and the corresponding vehicle pictures are loaded  <strong>[optional]</strong>.</li>
+<li>
+<strong>data-dm-insert-before-element-attribute</strong>: One element attribute to find and insert the media layer before, for example: data-widget-id  <strong>[optional]</strong>.</li>
+<li>
+<strong>data-dm-insert-before-element-attribute-value</strong>: One element attribute value that matches data-dm-insert-before-element-attribute and <em>must be used with</em>.  For example the following value of: inventory-detail1 used with the above example of "data-widget-id" would find all html tags with data-widget-id="inventory-detail1" and insert the media layer above it.      <strong>[optional]</strong>.</li>
 </ul>
 
 <h3>
@@ -73,17 +81,17 @@
 <h2>
 <a id="1-thumbnail-image-url-api" class="anchor" href="#1-thumbnail-image-url-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Thumbnail Image URL API</h2>
 
-<div class="highlight highlight-html"><pre>http://dealermade.co/api/1/dealerships/[DEALERMADE DEALERSHIP ID]/vehicles/[VEHICLE VIN]/images/[PICTURE SIZE].jpg?default_image_url=[default_image_url]</pre></div>
+<div class="highlight highlight-html"><pre>http://dealermade.co/api/1/dealerships/DEALERMADE DEALERSHIP ID/vehicles/VEHICLE VIN/images/PICTURE SIZE.jpg?default_image_url=[your image url for the vehicle goes here]</pre></div>
 
 <p>Required parameters in the image url:</p>
 
 <ul>
 <li>
-<strong>[DEALERMADE DEALERSHIP ID]</strong>: Unique Dealership ID (without brackets).</li>
+<strong>DEALERMADE DEALERSHIP ID</strong>: Unique Dealership ID .</li>
 <li>
-<strong>[VEHICLE VIN]</strong>: Full vin number of vehicle to display pictures for (also without brackets).</li>
+<strong>VEHICLE VIN</strong>: Full vin number of vehicle to display pictures for.</li>
 <li>
-<strong>[PICTURE SIZE]</strong>: One of the following standard Dealermade picture size names(also without brackets, full, large, etc.) Ex: thumb.jpg.
+<strong>PICTURE SIZE</strong>: One of the following standard Dealermade picture size names(medium, thumb, large, etc.) Ex: thumb.jpg.
 
 <ul>
 <li>
@@ -103,7 +111,7 @@
 </ul>
 </li>
 <li>
-<strong>[default_image_url]</strong>: Url Encoded default image thumbnail for that vehicle.  This will be used if pictures have not yet been taken using the Dealermade Photo Studio(also without brackets).</li>
+<strong>[your image url for the vehicle goes here]</strong>: Url Encoded default image thumbnail for that vehicle.  This will be used if pictures have not yet been taken using the Dealermade Photo Studio (also without brackets).</li>
 </ul>
 
 <h3>
@@ -116,17 +124,17 @@
 
 <p>To add our thumbnail javascript API, just add our javascript tag to any page that have thumbnails:</p>
 
-<div class="highlight highlight-html"><pre><span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">data-dealership-id</span>=<span class="pl-s"><span class="pl-pds">"</span>[DEALERMADE DEALERSHIP ID]<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>http://dealermade.co/assets/thumbnails/v1/api.js<span class="pl-pds">"</span></span>&gt;</span>
+<div class="highlight highlight-html"><pre><span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">data-dealership-id</span>=<span class="pl-s"><span class="pl-pds">"</span>DEALERMADE DEALERSHIP ID<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>http://dealermade.co/assets/thumbnails/v1/api.js<span class="pl-pds">"</span></span>&gt;</span>
 <span class="pl-s1">&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
 
 <ul>
 <li>
-<strong>[DEALERMADE DEALERSHIP ID]</strong>: Unique Dealership ID (without brackets).</li>
+<strong>[DEALERMADE DEALERSHIP ID]</strong>: Unique Dealership ID.</li>
 </ul>
 
 <p>And add the data-thumbnail-vin html attribute populated with the vehicle vin to any image tags for vehicles.</p>
 
-<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>[Your image url here]<span class="pl-pds">"</span></span> <span class="pl-e">data-thumbnail-vin</span>=<span class="pl-s"><span class="pl-pds">"</span>[VEHICLE VIN HERE]<span class="pl-pds">"</span></span>&gt;</pre></div>
+<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>Your image url here<span class="pl-pds">"</span></span> <span class="pl-e">data-thumbnail-vin</span>=<span class="pl-s"><span class="pl-pds">"</span>VEHICLE VIN HERE<span class="pl-pds">"</span></span>&gt;</pre></div>
 
 <h3>
 <a id="support---having-trouble-with-our-media-layer" class="anchor" href="#support---having-trouble-with-our-media-layer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support - Having trouble with our media layer?</h3>
