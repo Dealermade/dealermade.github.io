@@ -5,7 +5,7 @@
     <title>Dealermade by Dealermade</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
@@ -19,7 +19,7 @@
       <h1>
 <a id="media-layer-api" class="anchor" href="#media-layer-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>Media Layer API</h1>
 
-<div class="highlight highlight-html"><pre><span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>http://dealermade.co/assets/media-layer/v1/dm.js<span class="pl-pds">"</span></span> </span>
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>http://dealermade.co/assets/media-layer/v1/dm.js<span class="pl-pds">"</span></span> </span>
 <span class="pl-s1">data<span class="pl-e">-dm-dealership-id</span>=<span class="pl-s"><span class="pl-pds">"</span>DEALERMADE DEALERSHIP ID<span class="pl-pds">"</span></span> </span>
 <span class="pl-s1">data<span class="pl-e">-dm-vehicle-vin</span>=<span class="pl-s"><span class="pl-pds">"</span>VEHICLE VIN<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
 
@@ -58,7 +58,7 @@
 <h3>
 <a id="example-media-layer-implementation" class="anchor" href="#example-media-layer-implementation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example Media Layer Implementation:</h3>
 
-<div class="highlight highlight-html"><pre><span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>http://dealermade.co/assets/media-layer/v1/dm.js<span class="pl-pds">"</span></span> </span>
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>http://dealermade.co/assets/media-layer/v1/dm.js<span class="pl-pds">"</span></span> </span>
 <span class="pl-s1">data<span class="pl-e">-dm-dealership-id</span>=<span class="pl-s"><span class="pl-pds">"</span>team-of-navasota<span class="pl-pds">"</span></span> </span>
 <span class="pl-s1">data<span class="pl-e">-dm-vehicle-vin</span>=<span class="pl-s"><span class="pl-pds">"</span>1FTEW1EF4FFA24461<span class="pl-pds">"</span></span></span>
 <span class="pl-s1">data<span class="pl-e">-dm-element-id-to-replace</span>=<span class="pl-s"><span class="pl-pds">"</span>vpActualContent<span class="pl-pds">"</span></span></span>
@@ -81,7 +81,7 @@
 <h2>
 <a id="1-thumbnail-image-url-api" class="anchor" href="#1-thumbnail-image-url-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Thumbnail Image URL API</h2>
 
-<div class="highlight highlight-html"><pre>http://dealermade.co/api/1/dealerships/DEALERMADE DEALERSHIP ID/vehicles/VEHICLE VIN/images/PICTURE SIZE.jpg?default_image_url=[your image url for the vehicle goes here]</pre></div>
+<div class="highlight highlight-text-html-basic"><pre>http://dealermade.co/api/1/dealerships/DEALERMADE DEALERSHIP ID/vehicles/VEHICLE VIN/images/PICTURE SIZE.jpg?default_image_url=[your image url for the vehicle goes here]</pre></div>
 
 <p>Required parameters in the image url:</p>
 
@@ -104,10 +104,6 @@
 <strong>preview</strong> 200w x 133h</li>
 <li>
 <strong>thumb</strong> 160w x 107h</li>
-<li>
-<strong>mini</strong> 60w x 40h</li>
-<li>
-<strong>micro</strong> 25w x 17h</li>
 </ul>
 </li>
 <li>
@@ -117,14 +113,14 @@
 <h3>
 <a id="example-thumbnail-image-api-implementation" class="anchor" href="#example-thumbnail-image-api-implementation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example Thumbnail Image API Implementation:</h3>
 
-<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>http://dealermade.co/api/1/dealerships/team-of-navasota/vehicles/1FTFW1ET3DKD06282/images/thumb.jpg?default_image_url=http%3A%2F%2Ftagoreimg.d2fs.net%2Fimg%2Fused%2Fford%2Ff-150%2F1ftfw1et3dkd06282%2F3777d222-6258-4cf3-b694-6d6acd014c01.jpeg%3Fw%3D160%26h%3D120<span class="pl-pds">"</span></span>/&gt;</pre></div>
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>http://dealermade.co/api/1/dealerships/team-of-navasota/vehicles/1FTFW1ET3DKD06282/images/thumb.jpg?default_image_url=http%3A%2F%2Ftagoreimg.d2fs.net%2Fimg%2Fused%2Fford%2Ff-150%2F1ftfw1et3dkd06282%2F3777d222-6258-4cf3-b694-6d6acd014c01.jpeg%3Fw%3D160%26h%3D120<span class="pl-pds">"</span></span>/&gt;</pre></div>
 
 <h2>
 <a id="2-thumbnail-javascript-api" class="anchor" href="#2-thumbnail-javascript-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Thumbnail JavaScript API</h2>
 
 <p>To add our thumbnail javascript API, just add our javascript tag to any page that have thumbnails:</p>
 
-<div class="highlight highlight-html"><pre><span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">data-dealership-id</span>=<span class="pl-s"><span class="pl-pds">"</span>DEALERMADE DEALERSHIP ID<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>http://dealermade.co/assets/thumbnails/v1/api.js<span class="pl-pds">"</span></span>&gt;</span>
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">data-dealership-id</span>=<span class="pl-s"><span class="pl-pds">"</span>DEALERMADE DEALERSHIP ID<span class="pl-pds">"</span></span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>http://dealermade.co/assets/thumbnails/v1/api.js<span class="pl-pds">"</span></span>&gt;</span>
 <span class="pl-s1">&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
 
 <ul>
@@ -134,7 +130,7 @@
 
 <p>And add the data-thumbnail-vin html attribute populated with the vehicle vin to any image tags for vehicles.</p>
 
-<div class="highlight highlight-html"><pre>&lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>Your image url here<span class="pl-pds">"</span></span> <span class="pl-e">data-thumbnail-vin</span>=<span class="pl-s"><span class="pl-pds">"</span>VEHICLE VIN HERE<span class="pl-pds">"</span></span>&gt;</pre></div>
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>Your image url here<span class="pl-pds">"</span></span> <span class="pl-e">data-thumbnail-vin</span>=<span class="pl-s"><span class="pl-pds">"</span>VEHICLE VIN HERE<span class="pl-pds">"</span></span>&gt;</pre></div>
 
 <h3>
 <a id="support---having-trouble-with-our-media-layer" class="anchor" href="#support---having-trouble-with-our-media-layer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support - Having trouble with our media layer?</h3>
@@ -151,4 +147,3 @@
   
   </body>
 </html>
-
