@@ -1,23 +1,30 @@
-<!DOCTYPE html>
-<html lang="en-us">
+<!doctype html>
+<html>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Dealermade by Dealermade</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
   <body>
-    <section class="page-header">
-      <h1 class="project-name">Dealermade</h1>
-      <h2 class="project-tagline">API Docoumentation</h2>
-    </section>
+    <div class="wrapper">
+      <header>
+        <h1>Dealermade</h1>
+        <p>API Docoumentation</p>
 
-    <section class="main-content">
-      <h1>
-<a id="media-layer-api" class="anchor" href="#media-layer-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>Media Layer API</h1>
+
+        <p class="view"><a href="https://github.com/Dealermade">View My GitHub Profile</a></p>
+
+      </header>
+      <section>
+        <h1>
+<a id="media-layer-api" class="anchor" href="#media-layer-api" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Media Layer API</h1>
 
 <div class="highlight highlight-text-html-basic"><pre><span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>http://dealermade.co/assets/media-layer/v1/dm.js<span class="pl-pds">"</span></span> </span>
 <span class="pl-s1">data<span class="pl-e">-dm-dealership-id</span>=<span class="pl-s"><span class="pl-pds">"</span>DEALERMADE DEALERSHIP ID<span class="pl-pds">"</span></span> </span>
@@ -41,9 +48,11 @@
 
 <ul>
 <li>
-<strong>data-dm-element-id-to-replace</strong>: One element id to replace with the media layer(not to be used with insert before, below) <strong>[optional]</strong>.</li>
+<strong>data-dm-element-id-to-replace</strong>: One element id to replace with the media layer(not to be used with insert before or after below) <strong>[optional]</strong>.</li>
 <li>
-<strong>data-dm-insert-before-element-id</strong>: One element id where the media layer will insert before (not to be used with id to replace, above)  <strong>[optional]</strong>.</li>
+<strong>data-dm-insert-before-element-id</strong>: One element id where the media layer will insert before (not to be used with id to replace above or after below)  <strong>[optional]</strong>.</li>
+<li>
+<strong>data-dm-insert-after-element-id</strong>: One element id where the media layer will insert after (not to be used with id to replace or before above)  <strong>[optional]</strong>.</li>
 <li>
 <strong>data-dm-element-ids-to-hide</strong>: One or many element ids separated by a "|" pipe character that will be hidden when the media layer and the corresponding vehicle pictures are loaded  <strong>[optional]</strong>.</li>
 <li>
@@ -53,10 +62,10 @@
 </ul>
 
 <h3>
-<a id="the-media-layer-will-remain-invisible-until-pictures-have-been-taken-for-the-vehicle-using-the-dealermade-photo-studio-also-the-element-ids-listed-in-data-dm-element-ids-to-hide-will-not-be-hidden-unless-the-media-layer-has-loaded-with-pictures" class="anchor" href="#the-media-layer-will-remain-invisible-until-pictures-have-been-taken-for-the-vehicle-using-the-dealermade-photo-studio-also-the-element-ids-listed-in-data-dm-element-ids-to-hide-will-not-be-hidden-unless-the-media-layer-has-loaded-with-pictures" aria-hidden="true"><span class="octicon octicon-link"></span></a>The media layer will remain invisible until pictures have been taken for the vehicle using the dealermade photo studio, also the element ids listed in data-dm-element-ids-to-hide will not be hidden unless the media layer has loaded with pictures.</h3>
+<a id="the-media-layer-will-remain-invisible-until-pictures-have-been-taken-for-the-vehicle-using-the-dealermade-photo-studio-also-the-element-ids-listed-in-data-dm-element-ids-to-hide-will-not-be-hidden-unless-the-media-layer-has-loaded-with-pictures" class="anchor" href="#the-media-layer-will-remain-invisible-until-pictures-have-been-taken-for-the-vehicle-using-the-dealermade-photo-studio-also-the-element-ids-listed-in-data-dm-element-ids-to-hide-will-not-be-hidden-unless-the-media-layer-has-loaded-with-pictures" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The media layer will remain invisible until pictures have been taken for the vehicle using the dealermade photo studio, also the element ids listed in data-dm-element-ids-to-hide will not be hidden unless the media layer has loaded with pictures.</h3>
 
 <h3>
-<a id="example-media-layer-implementation" class="anchor" href="#example-media-layer-implementation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example Media Layer Implementation:</h3>
+<a id="example-media-layer-implementation" class="anchor" href="#example-media-layer-implementation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example Media Layer Implementation:</h3>
 
 <div class="highlight highlight-text-html-basic"><pre><span class="pl-s1">&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>http://dealermade.co/assets/media-layer/v1/dm.js<span class="pl-pds">"</span></span> </span>
 <span class="pl-s1">data<span class="pl-e">-dm-dealership-id</span>=<span class="pl-s"><span class="pl-pds">"</span>team-of-navasota<span class="pl-pds">"</span></span> </span>
@@ -67,7 +76,7 @@
 <p><a href="http://www.teamofnavasota.com/new/details/1FTEW1EF4FFA24461">http://www.teamofnavasota.com/new/details/1FTEW1EF4FFA24461</a></p>
 
 <h1>
-<a id="thumbnail-api" class="anchor" href="#thumbnail-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>Thumbnail API</h1>
+<a id="thumbnail-api" class="anchor" href="#thumbnail-api" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Thumbnail API</h1>
 
 <p>We currently have two alternatives for a thumbnail API:</p>
 
@@ -79,7 +88,7 @@
 <p>Please choose the API that is most convenient for you.</p>
 
 <h2>
-<a id="1-thumbnail-image-url-api" class="anchor" href="#1-thumbnail-image-url-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>1. Thumbnail Image URL API</h2>
+<a id="1-thumbnail-image-url-api" class="anchor" href="#1-thumbnail-image-url-api" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>1. Thumbnail Image URL API</h2>
 
 <div class="highlight highlight-text-html-basic"><pre>http://dealermade.co/api/1/dealerships/DEALERMADE DEALERSHIP ID/vehicles/VEHICLE VIN/images/PICTURE SIZE.jpg?default_image_url=[your image url for the vehicle goes here]</pre></div>
 
@@ -109,12 +118,12 @@
 </ul>
 
 <h3>
-<a id="example-thumbnail-image-api-implementation" class="anchor" href="#example-thumbnail-image-api-implementation" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example Thumbnail Image API Implementation:</h3>
+<a id="example-thumbnail-image-api-implementation" class="anchor" href="#example-thumbnail-image-api-implementation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Example Thumbnail Image API Implementation:</h3>
 
 <div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>http://dealermade.co/api/1/dealerships/team-of-navasota/vehicles/1FTFW1ET3DKD06282/images/preview.jpg?default_image_url=http%3A%2F%2Ftagoreimg.d2fs.net%2Fimg%2Fused%2Fford%2Ff-150%2F1ftfw1et3dkd06282%2F3777d222-6258-4cf3-b694-6d6acd014c01.jpeg%3Fw%3D160%26h%3D120<span class="pl-pds">"</span></span>/&gt;</pre></div>
 
 <h2>
-<a id="2-thumbnail-javascript-api" class="anchor" href="#2-thumbnail-javascript-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>2. Thumbnail JavaScript API</h2>
+<a id="2-thumbnail-javascript-api" class="anchor" href="#2-thumbnail-javascript-api" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>2. Thumbnail JavaScript API</h2>
 
 <p>To add our thumbnail javascript API, just add our javascript tag to any page that have thumbnails:</p>
 
@@ -131,17 +140,15 @@
 <div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">img</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>Your image url here<span class="pl-pds">"</span></span> <span class="pl-e">data-thumbnail-vin</span>=<span class="pl-s"><span class="pl-pds">"</span>VEHICLE VIN HERE<span class="pl-pds">"</span></span>&gt;</pre></div>
 
 <h3>
-<a id="support---having-trouble-with-our-media-layer" class="anchor" href="#support---having-trouble-with-our-media-layer" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support - Having trouble with our media layer?</h3>
+<a id="support---having-trouble-with-our-media-layer" class="anchor" href="#support---having-trouble-with-our-media-layer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support - Having trouble with our media layer?</h3>
 
 <p>Please contact: <a href="mailto:jared@dealermade.co">jared@dealermade.co</a> or call (888) 403-9143 and ask for Jared.</p>
-
-      <footer class="site-footer">
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </section>
+      <footer>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
-
-    </section>
-
-  
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
   </body>
 </html>
