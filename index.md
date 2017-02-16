@@ -1,7 +1,7 @@
 # Media Layer API
 
 ```html
-<script src="//dealermade.com/assets/media-layer/v1/dm.js" 
+<script src="//dealermade.com/assets/media-layer/v2/dm.js" 
 data-dm-dealership-id="DEALERMADE DEALERSHIP ID" 
 data-dm-vehicle-vin="VEHICLE VIN"></script>
 ```
@@ -9,7 +9,7 @@ data-dm-vehicle-vin="VEHICLE VIN"></script>
 The above script will insert the media layer next to the script tag.
 
 Required attributes of script tag:
-* **src**: currently _must_ point to: //dealermade.com/assets/media-layer/v1/dm.js   
+* **src**: currently _must_ point to: //dealermade.com/assets/media-layer/v2/dm.js   
 * **data-dm-dealership-id**: Unique Dealership ID.
 * **data-dm-vehicle-vin**: Full vin number of vehicle to display pictures for.
 
@@ -27,7 +27,7 @@ Optional Attributes of script tag to configure media layer tag placement:
 ### Example Media Layer Implementation:
 
 ```html
-<script src="//dealermade.com/assets/media-layer/v1/dm.js" 
+<script src="//dealermade.com/assets/media-layer/v2/dm.js" 
 data-dm-dealership-id="team-of-navasota" 
 data-dm-vehicle-vin="1FTEW1EF4FFA24461"
 data-dm-element-id-to-replace="vpActualContent"
