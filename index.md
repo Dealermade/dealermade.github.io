@@ -23,7 +23,7 @@ By default, the media layer will be placed in the same element as the script tag
 * **data-dm-insert-after-element-attribute-value**: One element attribute and value pair that the media layer will insert after. _The attribute and value should be specified and separated by a "|" pipe character_. For example: _data-dm-insert-after-element-attribute-value="data-widget-id|inventory-detail1"_ would find the first tag with data-widget-id="inventory-detail1" and insert the media layer after it. **[optional]**.
 
 Other optional attributes:
-* **data-dm-element-ids-to-hide**: One or many element ids separated by a " " space character that will be hidden when the media layer and the corresponding vehicle pictures are loaded  **[optional]**.
+* **data-dm-hide-element-ids**: One or many element ids separated by a " " space character that will be hidden when the media layer and the corresponding vehicle pictures are loaded  **[optional]**.
 
 ### The media layer will remain invisible until pictures have been taken for the vehicle using the dealermade photo studio, also the element ids listed in data-dm-element-ids-to-hide will not be hidden unless the media layer has loaded with pictures.
 
@@ -33,8 +33,8 @@ Other optional attributes:
 <script src="//dealermade.com/assets/media-layer/v2/dm.js" 
 data-dm-dealership-id="team-of-navasota" 
 data-dm-vehicle-vin="1FTEW1EF4FFA24461"
-data-dm-element-id-to-replace="vpActualContent"
-data-dm-element-ids-to-hide="dtlExpand"></script>
+data-dm-replace-element-id="vpActualContent"
+data-dm-hide-element-ids="dtlExpand dtlExpand2"></script>
 ```
 
 
