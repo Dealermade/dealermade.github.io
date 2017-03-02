@@ -13,15 +13,18 @@ Required attributes of script tag:
 * **data-dm-dealership-id**: Unique Dealership ID.
 * **data-dm-vehicle-vin**: Full vin number of vehicle to display pictures for.
 
-Optional Attributes of script tag to configure media layer tag placement:
-* **data-dm-element-id-to-replace**: One element id to replace with the media layer(not to be used with insert before or after below) **[optional]**.
-* **data-dm-insert-before-element-id**: One element id where the media layer will insert before (not to be used with id to replace above or after below)  **[optional]**.
-* **data-dm-insert-after-element-id**: One element id where the media layer will insert after (not to be used with id to replace or before above)  **[optional]**.
-* **data-dm-element-ids-to-hide**: One or many element ids separated by a "|" pipe character that will be hidden when the media layer and the corresponding vehicle pictures are loaded  **[optional]**.
+By default, the media layer will be placed in the same element as the script tag. However, the media layer can be displayed ina different area, with the folliwing placement attributes. Note that they are mutually exclusive, and not to be used in conjunction with one another. Only ONE of the following optional attributes should be used per script tag:
+* **data-dm-replace-element-id**: One element id to replace with the media layer **[optional]**.
+* **data-dm-insert-before-element-id**: One element id where the media layer will insert before  **[optional]**.
+* **data-dm-insert-after-element-id**: One element id where the media layer will insert after **[optional]**.
 * **data-dm-insert-before-element-attribute**: One element attribute to find and insert the media layer before, for example: data-widget-id  **[optional]**.
-* **data-dm-insert-before-element-attribute-value**: One element attribute value that matches data-dm-insert-before-element-attribute and _must be used with_.  For example the following value of: inventory-detail1 used with the above example of "data-widget-id" would find all html tags with data-widget-id="inventory-detail1" and insert the media layer above it.      **[optional]**.
+* **data-dm-insert-before-element-attribute-value**: One element attribute and value pair that the media layer will insert before. _The attribute and value should be specified and separated by a "|" pipe character_. For example: _data-dm-insert-before-element-attribute-value="data-widget-id|inventory-detail1"_ would find the first tag with data-widget-id="inventory-detail1" and insert the media layer before it. **[optional]**.
 * **data-dm-insert-after-element-attribute**: One element attribute to find and insert the media layer after, for example: data-widget-id  **[optional]**.
-* **data-dm-insert-after-element-attribute-value**: One element attribute value that matches data-dm-insert-after-element-attribute and _must be used with_.  For example the following value of: inventory-detail1 used with the above example of "data-widget-id" would find all html tags with data-widget-id="inventory-detail1" and insert the media layer after it.      **[optional]**.
+* **data-dm-insert-after-element-attribute-value**: One element attribute and value pair that the media layer will insert after. _The attribute and value should be specified and separated by a "|" pipe character_. For example: _data-dm-insert-after-element-attribute-value="data-widget-id|inventory-detail1"_ would find the first tag with data-widget-id="inventory-detail1" and insert the media layer after it. **[optional]**.
+
+Other optional attributes:
+* **data-dm-hide-element-ids**: One or many element ids separated by a " " space character that will be hidden when the media layer and the corresponding vehicle pictures are loaded  **[optional]**.
+
 ### The media layer will remain invisible until pictures have been taken for the vehicle using the dealermade photo studio, also the element ids listed in data-dm-element-ids-to-hide will not be hidden unless the media layer has loaded with pictures.
 
 ### Example Media Layer Implementation:
@@ -30,8 +33,8 @@ Optional Attributes of script tag to configure media layer tag placement:
 <script src="//dealermade.com/assets/media-layer/v2/dm.js" 
 data-dm-dealership-id="team-of-navasota" 
 data-dm-vehicle-vin="1FTEW1EF4FFA24461"
-data-dm-element-id-to-replace="vpActualContent"
-data-dm-element-ids-to-hide="dtlExpand"></script>
+data-dm-replace-element-id="vpActualContent"
+data-dm-hide-element-ids="dtlExpand dtlExpand2"></script>
 ```
 
 
