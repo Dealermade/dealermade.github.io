@@ -14,7 +14,7 @@ Required attributes of script tag:
 * **data-dm-vehicle-vin**: Full vin number of vehicle to display pictures for.
 
 By default, the media layer will be placed in the same element as the script tag. However, the media layer can be displayed ina different area, with the folliwing placement attributes. Note that they are mutually exclusive, and not to be used in conjunction with one another. Only ONE of the following optional attributes should be used per script tag:
-* **data-dm-element-id-to-replace**: One element id to replace with the media layer **[optional]**.
+* **data-dm-replace-element-ide**: One element id to replace with the media layer **[optional]**.
 * **data-dm-insert-before-element-id**: One element id where the media layer will insert before  **[optional]**.
 * **data-dm-insert-after-element-id**: One element id where the media layer will insert after **[optional]**.
 * **data-dm-insert-before-element-attribute**: One element attribute to find and insert the media layer before, for example: data-widget-id  **[optional]**.
